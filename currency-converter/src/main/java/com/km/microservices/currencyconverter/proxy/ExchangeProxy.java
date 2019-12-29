@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import java.util.Optional;
 
 @FeignClient(name = "currency-exchange-service")
+@RibbonClient(name = "currency-exchange-service")
 public interface ExchangeProxy {
 
     @RequestMapping("/currency-exchange/from/{from}/to/{to}")
